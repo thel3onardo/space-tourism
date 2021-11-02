@@ -73,10 +73,6 @@ export default {
 <style lang="sass" scoped>
     @import '../sass/variables.scss'
 
-    .active
-        color: #fff !important
-        border-bottom: 3px solid $color_white !important
-
     .item
         display: flex
         width: 100%
