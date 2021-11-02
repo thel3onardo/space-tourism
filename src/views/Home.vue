@@ -34,8 +34,9 @@ export default {
     @import '../sass/variables.scss'
 
     .home
-      width: 100vw
-      height: 100vh
+      height: 100%
+      min-height: 100vh
+      width: 100%
 
       background-image: url('../assets/home/background-home-desktop.jpg')
       background-position: center

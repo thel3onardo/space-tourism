@@ -8,15 +8,15 @@
         </div>
 
         <nav>
-            <a href="">
+            <router-link to="/">
                 <span class="nav-link__number">00</span>
                 <span class="nav-link__name">home</span>
-            </a>
+            </router-link>
 
-            <a href="">
+            <router-link to="/destination">
                 <span class="nav-link__number">01</span>
                 <span class="nav-link__name">destination</span>
-            </a>
+            </router-link>
 
             <a href="">
                 <span class="nav-link__number">02</span>
@@ -33,11 +33,11 @@
 
 <script>
 export default {
-
+    name: 'NavBar'
 }
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
     @import '../sass/variables.scss'
 
     .nav-bar
