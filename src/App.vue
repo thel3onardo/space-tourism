@@ -17,4 +17,13 @@
     color: #ffffff;
     font-family: $text-texts;
   }
+  ::-moz-selection { /* Code for Firefox */
+    color: $color_dark;
+    background: $color_white;
+  }
+
+  ::selection {
+    color: $color_dark;
+    background: $color_white;
+  }
 </style>

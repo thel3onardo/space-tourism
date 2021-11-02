@@ -69,8 +69,8 @@ export default {
         margin: .1em 0
 
       p
-        font-size: 1.1rem
-        font-weight: 400
+        font-size: 1.2rem
+        font-weight: 200
         line-height: 32px
 
     .home-content__button
@@ -81,8 +81,23 @@ export default {
         height: 274px
         border: none
         border-radius: 50%
+        position: relative
         
         font-family: $text-titles
         font-size: 2rem
         text-transform: uppercase
+        
+        &:before
+          content: ''
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          border-radius: 50%
+          background-color: rgb(255, 255, 255, 0.1)
+          transition: all .75s ease
+
+        &:hover:before
+          transform: scale(1.4)
 </style>
