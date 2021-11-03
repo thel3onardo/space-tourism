@@ -43,7 +43,6 @@ export default {
         align-items: end
         justify-content: space-around
         height: 100%
-        border: 1px solid red
 
     .crew-item__text
         display: flex
