@@ -1,14 +1,10 @@
 <template>
-<transition name="fade">
   <div class="container">
       <NavBar/>
 
       <div class="destination">
-          <div class="destination__title">
-              <span>01</span>
-              <span>pick your destination</span>
-          </div>
           <div class="destination__content">
+            <Header :page_number="'01'" :header_label="'Pick your destination'"/>
             <DestinationItem :title="'moon'" :description="'See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.'" :avg_distance="384" :travel_time="1" v-if="currentDestinationItem === 1" @change-destination-item="changeCurrentDestinationItem"/>
 
             <DestinationItem :title="'mars'" :description="'Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!'" :avg_distance="225" :travel_time="9" v-if="currentDestinationItem === 2" @change-destination-item="changeCurrentDestinationItem"/>
@@ -19,12 +15,12 @@
           </div>
       </div>
   </div>
-</transition>
 </template>
 
 <script>
 import NavBar from '../components/NavBar.vue'
 import DestinationItem from '../components/DestinationItem.vue'
+import Header from '../components/Header.vue'
 
 export default {
     name: 'Destination',
@@ -36,6 +32,7 @@ export default {
     components: {
         NavBar,
         DestinationItem,
+        Header
     },
     methods: {
         changeCurrentDestinationItem(number) {
@@ -82,18 +79,5 @@ export default {
         height: 88.5%
         max-width: 1400px
         margin: 0 auto
-
-    .destination__title
-        font-size: 1.8rem
-
-        span:first-child
-            color: rgba(255, 255, 255, 0.25)
-            font-weight: 600
-            margin: 0 1em
-
-        span
-            color: #color_white
-            text-transform: uppercase
-            letter-spacing: 4.72px
 
 </style>

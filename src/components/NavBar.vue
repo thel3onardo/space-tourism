@@ -18,10 +18,10 @@
                 <span class="nav-link__name">destination</span>
             </router-link>
 
-            <a href="">
+            <router-link to="/crew">
                 <span class="nav-link__number">02</span>
                 <span class="nav-link__name">crew</span>
-            </a>
+            </router-link>
 
             <a href="">
                 <span class="nav-link__number">03</span>

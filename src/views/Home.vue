@@ -34,16 +34,15 @@ export default {
     @import '../sass/variables.scss'
 
     .home
-      height: 100%
+      height: 100vh
       min-height: 100vh
       width: 100%
+      padding: 2em 0
 
       background-image: url('../assets/home/background-home-desktop.jpg')
       background-position: center
       background-repeat: no-repeat
       background-size: cover
-
-      padding: 2em 0
 
     .home-content
       display: flex
