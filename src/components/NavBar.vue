@@ -23,10 +23,10 @@
                 <span class="nav-link__name">crew</span>
             </router-link>
 
-            <a href="">
+            <router-link to="/technology">
                 <span class="nav-link__number">03</span>
                 <span class="nav-link__name">technology</span>
-            </a>
+            </router-link>
         </nav>
     </div>
 </template>

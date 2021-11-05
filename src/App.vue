@@ -17,6 +17,7 @@
     color: #ffffff;
     font-family: $text-texts;
   }
+
   ::-moz-selection { /* Code for Firefox */
     color: $color_dark;
     background: $color_white;
@@ -25,5 +26,20 @@
   ::selection {
     color: $color_dark;
     background: $color_white;
+  }
+
+  body::-webkit-scrollbar {
+    width: .8em;
+  }
+
+  body::-webkit-scrollbar-track {
+    background-color: $color_dark
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: $color_white;
+    border-radius: 1px;
+    filter: brightness(1.5);
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 1);
   }
 </style>
