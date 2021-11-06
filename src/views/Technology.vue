@@ -86,11 +86,13 @@ export default {
         display: flex
         height: 99%
         position: relative
-        border: 1px solid red
 
     .technology__content__menu
         display: flex
         flex-direction: column
+        justify-content: center
+
+        height: 100%
         padding-right: 5%
 
     .technology__content-container
