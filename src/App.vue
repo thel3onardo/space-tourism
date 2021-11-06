@@ -1,8 +1,20 @@
 <template>
   <div id="app">
+    <audio loop ref="audio">
+      <source src="./audio/interstellar.mp3" type="audio/mpeg">
+    </audio>
     <router-view/>
   </div>
 </template>
+
+<script>
+export default {
+  mounted() {
+    this.$refs.audio.volume = 0.5
+    console.log(this.$refs.audio.volume)
+  }
+}
+</script>
 
 <style lang="scss">
   @import './sass/variables.scss';
@@ -42,4 +54,5 @@
     filter: brightness(1.5);
     box-shadow: 0px 0px 30px rgba(255, 255, 255, 1);
   }
+
 </style>
