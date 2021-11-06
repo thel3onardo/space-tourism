@@ -7,10 +7,10 @@
             
             <div class="technology__content">
                 <div class="technology__content__menu">
-                    <TechnologyCircle :is_active="true" :circle_number="1" @changetechitem="changeCurrentTechnologyItem"/>
-                    <TechnologyCircle :is_active="false" :circle_number="2"
+                    <TechnologyCircle :is_active="currentTechnologyItem === 1" :circle_number="1" @changetechitem="changeCurrentTechnologyItem"/>
+                    <TechnologyCircle :is_active="currentTechnologyItem === 2" :circle_number="2"
                     @changetechitem="changeCurrentTechnologyItem"/>
-                    <TechnologyCircle :is_active="false" :circle_number="3"
+                    <TechnologyCircle :is_active="currentTechnologyItem === 3" :circle_number="3"
                     @changetechitem="changeCurrentTechnologyItem"/>
                 </div>
 
