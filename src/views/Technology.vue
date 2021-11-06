@@ -1,7 +1,7 @@
 <template>
     <div class="technology">
         <NavBar/>
-        
+        <transition name="fade" appear>
         <div class="technology__content-container">
             <Header :page_number="'03'" :header_label="'space launch 101'"/>
             
@@ -27,6 +27,7 @@
                 </transition>
             </div>
         </div>
+        </transition>
     </div>
 </template>
 
@@ -58,15 +59,6 @@ export default {
     }
 }
 </script>
-
-<style lang="scss">
-    .fade-enter-active, .fade-leave-active {
-        transition: opacity .5s;
-    }
-    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-        opacity: 0;
-    }
-</style>
 
 <style lang="sass" scoped>
     .technology

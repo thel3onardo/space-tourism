@@ -33,7 +33,7 @@ export default {
     .music-mute
         height: 50px
         width: 50px
-        position: fixed
+        position: absolute
         bottom: 1%
         left: 1%
         border-radius: 10px

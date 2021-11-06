@@ -1,9 +1,9 @@
 <template>
-  <div id="app">
+  <div id="app" style="border: 1px solid red">
     <audio autoplay loop ref="audio">
       <source src="./audio/interstellar.mp3" type="audio/mpeg">
     </audio>
-    <app-music-mute @changemusicstate="changeMusicState"/>
+    <app-music-mute @changemusicstate="changeMusicState" style="bottom: 0"/>
     <router-view/>
   </div>
 </template>
@@ -68,6 +68,13 @@ export default {
     border-radius: 1px;
     filter: brightness(1.5);
     box-shadow: 0px 0px 30px rgba(255, 255, 255, 1);
+  }
+
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity 1s
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0
   }
 
 </style>

@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-    @import '../sass/variables.scss'
+    @import '../sass/_variables.scss'
 
     @keyframes teste
         0%
@@ -90,6 +90,7 @@ export default {
         align-items: center
 
         a
+            color: inherit
             height: 100%
             text-decoration: none
             margin: 0 1.5em
@@ -101,6 +102,7 @@ export default {
         
             &:hover
                 border-bottom: 2px solid #fff
+                color: $color_pale_blue
 
     .nav-link__number
         font-weight: 800
@@ -111,4 +113,13 @@ export default {
         font-weight: 400
         text-transform: uppercase
         letter-spacing: 2px
+        color: inherit
+
+    @media screen and (max-width: 480px)
+        .nav-bar__line
+            display: none
+
+    @media screen and (min-width: 768px)
+        .nav-bar__line
+            display: none
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div class="crew">
         <NavBar/>
-
+        <transition name="fade" appear>
         <div class="crew-content">
             <Header :page_number="'02'" :header_label="'meet your crew'" @changecrew="listeningChangeCrew"/>
 
@@ -24,6 +24,7 @@
                 :current_crew="currentCrew"  @changecrew="listeningChangeCrew" v-show="currentCrew === 4"/>
             </transition>
         </div>
+        </transition>
     </div>
 </template>
 
@@ -53,16 +54,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-    .fade-enter-active, .fade-leave-active {
-        transition: opacity .5s;
-    }
-    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-        opacity: 0;
-    }
-</style>
-
-<style lang="sass">
+<style lang="sass" scoped>
     .crew
         height: 100vh
         width: 100%

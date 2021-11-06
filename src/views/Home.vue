@@ -1,17 +1,18 @@
 <template>
     <div class="home">
       <NavBar/>
-
-      <div class="home-content">
-        <div class="home-content__text">
-          <h3>so you want to travel to</h3>
-          <h1>space</h1>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita dolorum doloribus cum sit? Explicabo distinctio dolorum iusto quo nam voluptatibus provident, ex possimus excepturi, quibusdam officiis est numquam! Suscipit, quisquam?</p>
+        <transition name="fade" appear>
+        <div class="home-content">
+          <div class="home-content__text">
+            <h3>so you want to travel to</h3>
+            <h1>space</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita dolorum doloribus cum sit? Explicabo distinctio dolorum iusto quo nam voluptatibus provident, ex possimus excepturi, quibusdam officiis est numquam! Suscipit, quisquam?</p>
+          </div>
+          <div class="home-content__button">
+              <button>explore</button>
+          </div>
         </div>
-        <div class="home-content__button">
-            <button>explore</button>
-        </div>
-      </div>
+        </transition>
     </div>
 </template>
 
@@ -100,4 +101,21 @@ export default {
 
         &:hover:before
           transform: scale(1.4)
+
+    @media screen and (max-width: 480px)
+        .home-content
+          flex-direction: column
+
+        .home-content__text
+          flex-direction: column
+
+    @media screen and (max-width: 768px)
+        .home
+          height: 100%
+        .home-content
+          flex-direction: column
+
+        .home-content__text
+          flex-direction: column
+          text-align: center
 </style>
