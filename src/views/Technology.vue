@@ -11,7 +11,9 @@
                     <TechnologyCircle :is_active="false" :circle_number="2"/>
                     <TechnologyCircle :is_active="false" :circle_number="3"/>
                 </div>
-                <TechnologyItem :item_title="'launch vehicle'" :item_description="`A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!`" :item_image="'image-launch-vehicle-portrait'"/>
+                <TechnologyItem :item_title="'launch vehicle'" :item_description="`A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!`" :item_image="'image-launch-vehicle-portrait'" v-if="false"/>
+
+                <TechnologyItem :item_title="'spaceport'" :item_description="`A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.`" :item_image="'image-space-capsule-portrait'"/>
             </div>
         </div>
     </div>
@@ -54,6 +56,7 @@ export default {
     .technology__content
         display: flex
         align-items: center
+        height: 99%
 
     .technology__content__menu
         display: flex
