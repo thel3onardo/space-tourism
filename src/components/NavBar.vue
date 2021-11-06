@@ -40,6 +40,16 @@ export default {
 <style lang="sass" scoped>
     @import '../sass/variables.scss'
 
+    @keyframes teste
+        0%
+            transform: rotate(0deg) scale(1)
+
+        50%
+            transform: rotate(180deg) scale(1.1)
+
+        100%
+            transform: rotate(359deg) scale(1)
+
     .nav-bar
         display: flex
         align-items: center
@@ -54,6 +64,8 @@ export default {
         img
             width: 48px
 
+            &:hover
+                animation: teste 1.5s ease
     .nav-bar__line
         position: relative
         width: 473px

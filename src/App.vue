@@ -20,8 +20,8 @@ export default {
     console.log(this.$refs.audio.volume)
   },
   methods: {
-    changeMusicState(value) {
-      if (value === 'muted') {
+    changeMusicState(state) {
+      if (state === 'muted') {
         this.$refs.audio.pause();
       } else {
         this.$refs.audio.play();
