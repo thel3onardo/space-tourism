@@ -93,9 +93,11 @@ export default {
             height: 100%
             text-decoration: none
             margin: 0 1.5em
+            border-bottom: 2px solid rgba(0, 0, 0, 0)
 
             display: flex
             align-items: center
+            transition: all .5s ease
         
             &:hover
                 border-bottom: 2px solid #fff
