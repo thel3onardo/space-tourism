@@ -7,13 +7,20 @@
             
             <div class="technology__content">
                 <div class="technology__content__menu">
-                    <TechnologyCircle :is_active="true" :circle_number="1"/>
-                    <TechnologyCircle :is_active="false" :circle_number="2"/>
-                    <TechnologyCircle :is_active="false" :circle_number="3"/>
+                    <TechnologyCircle :is_active="true" :circle_number="1" @changetechitem="changeCurrentTechnologyItem"/>
+                    <TechnologyCircle :is_active="false" :circle_number="2"
+                    @changetechitem="changeCurrentTechnologyItem"/>
+                    <TechnologyCircle :is_active="false" :circle_number="3"
+                    @changetechitem="changeCurrentTechnologyItem"/>
                 </div>
-                <TechnologyItem :item_title="'launch vehicle'" :item_description="`A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!`" :item_image="'image-launch-vehicle-portrait'" v-if="false"/>
 
-                <TechnologyItem :item_title="'spaceport'" :item_description="`A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.`" :item_image="'image-space-capsule-portrait'"/>
+                <transition name="fade">
+                    <TechnologyItem :item_title="'launch vehicle'" :item_description="`A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!`" :item_image="'image-launch-vehicle-portrait'" v-show="currentTechnologyItem === 1"/>
+                </transition>
+
+                <transition name="fade">
+                    <TechnologyItem :item_title="'spaceport'" :item_description="`A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.`" :item_image="'image-space-capsule-portrait'" v-show="currentTechnologyItem === 2"/>
+                </transition>
             </div>
         </div>
     </div>
@@ -27,14 +34,35 @@ import TechnologyItem from '../components/TechnologyItem.vue'
 
 export default {
     name: 'Technology',
+    data() {
+        return {
+            currentTechnologyItem: 1,
+        }
+    },
     components: {
         NavBar,
         Header,
         TechnologyCircle,
         TechnologyItem
+    },
+    methods: {
+        changeCurrentTechnologyItem(number) {
+            console.log('teste');
+            console.log(number);
+            return this.currentTechnologyItem = number;
+        }
     }
 }
 </script>
+
+<style lang="scss">
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity .5s;
+    }
+    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+        opacity: 0;
+    }
+</style>
 
 <style lang="sass" scoped>
     .technology
@@ -51,12 +79,14 @@ export default {
 
     .technology__content-container
         max-width: 1400px
+        width: 100%
         margin: 0 auto
 
     .technology__content
         display: flex
-        align-items: center
         height: 99%
+        position: relative
+        border: 1px solid red
 
     .technology__content__menu
         display: flex

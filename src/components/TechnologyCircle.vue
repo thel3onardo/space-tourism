@@ -1,5 +1,5 @@
 <template>
-  <div class="technology-circle" :class="{'is-active': is_active}">
+  <div class="technology-circle" :class="{'is-active': is_active}" @click="emitCurrentTechItem(circle_number)">
       <span>{{ circle_number }}</span>
   </div>
 </template>
@@ -15,6 +15,11 @@ export default {
         is_active: {
             type: Boolean,
             required: false,
+        }
+    },
+    methods: {
+        emitCurrentTechItem(num) {
+            return this.$emit('changetechitem', num);
         }
     }
 }

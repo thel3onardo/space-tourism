@@ -1,14 +1,14 @@
 <template>
-  <div class="tech-item">
-    <div class="tech-item__text">
-        <span>the terminology</span>
-        <h1>{{ item_title }}</h1>
-        <p>{{ item_description }}</p>
+    <div class="tech-item">
+        <div class="tech-item__text">
+            <span>the terminology</span>
+            <h1>{{ item_title }}</h1>
+            <p>{{ item_description }}</p>
+        </div>
+        <div class="tech-item__image">
+            <img :src="require(`../assets/technology/${item_image}.jpg`)">
+        </div>
     </div>
-    <div class="tech-item__image">
-        <img :src="require(`../assets/technology/${item_image}.jpg`)">
-    </div>
-  </div>
 </template>
 
 <script>
@@ -40,6 +40,10 @@ export default {
         display: flex
         justify-content: space-between
         align-items: center
+        position: absolute
+        width: 90%
+        height: 100%
+        margin-left: 10%
 
     .tech-item__text
         width: 50%
