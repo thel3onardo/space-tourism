@@ -1,17 +1,32 @@
 <template>
   <div id="app">
-    <audio loop ref="audio">
+    <audio autoplay loop ref="audio">
       <source src="./audio/interstellar.mp3" type="audio/mpeg">
     </audio>
+    <app-music-mute @changemusicstate="changeMusicState"/>
     <router-view/>
   </div>
 </template>
 
 <script>
+import AppMusicMute from './components/AppMusicMute.vue'
+
 export default {
+  components: {
+    AppMusicMute
+  },
   mounted() {
     this.$refs.audio.volume = 0.5
     console.log(this.$refs.audio.volume)
+  },
+  methods: {
+    changeMusicState(value) {
+      if (value === 'muted') {
+        this.$refs.audio.pause();
+      } else {
+        this.$refs.audio.play();
+      }
+    }
   }
 }
 </script>
