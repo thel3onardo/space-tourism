@@ -76,7 +76,6 @@ export default {
     .item
         display: flex
         width: 100%
-        margin: 6em 0
     
     .item__img
         padding-right: 12em
