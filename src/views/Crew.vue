@@ -56,9 +56,11 @@ export default {
 
 <style lang="sass" scoped>
     .crew
-        height: 100vh
+        min-height: 100vh
+        height: 100%
         width: 100%
         padding: 2em 0
+        overflow: hidden
         
         background-image: url('../assets/crew/background-crew-desktop.jpg')
         background-position: center
@@ -66,8 +68,8 @@ export default {
 
     .crew-content
         width: 80%
-        height: 83%
         max-width: 1400px
+        height: calc(100vh - 128px)
         margin: 0 auto
         position: relative
 </style>

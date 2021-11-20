@@ -88,11 +88,13 @@ export default {
 
     .crew-item__img
         width: 41%
-        height: 100%
+        height: 98%
+        display: flex
+        align-items: flex-end
 
         img
             max-height: 100%
-            transform: scale(1.05) translateY(-10px)
+            transform: scale(1.1) translateY(-10px)
 
     .circles
         display: flex

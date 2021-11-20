@@ -93,7 +93,6 @@ export default {
         padding-right: 5%
 
     .technology__content-container
-        height: 85%
         padding-left: 10%
 
 </style>
