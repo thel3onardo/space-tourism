@@ -1,5 +1,5 @@
 <template>
-  <div id="app" style="border: 1px solid red">
+  <div id="app">
     <audio autoplay loop ref="audio">
       <source src="./audio/interstellar.mp3" type="audio/mpeg">
     </audio>
