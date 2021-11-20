@@ -63,7 +63,8 @@ export default {
 <style lang="sass" scoped>
     .technology
         padding: 2em 0
-        height: 100vh
+        min-height: 100vh
+        height: 100%
         width: 100%
         display: flex
         flex-direction: column
@@ -80,8 +81,8 @@ export default {
 
     .technology__content
         display: flex
-        height: 99%
         position: relative
+        margin: 4em 0
 
     .technology__content__menu
         display: flex
