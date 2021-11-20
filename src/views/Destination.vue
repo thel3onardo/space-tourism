@@ -1,10 +1,12 @@
 <template>
   <div class="container">
       <NavBar/>
+      <transition name="fade" appear>
+        <Header :page_number="'01'" :header_label="'Pick your destination'" class="header__style"/>
+      </transition>
         <transition name="fade" appear>
         <div class="destination">
             <div class="destination__content">
-                <Header :page_number="'01'" :header_label="'Pick your destination'"/>
                 <DestinationItem :title="'moon'" :description="'See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.'" :avg_distance="384" :travel_time="1" v-if="currentDestinationItem === 1" @change-destination-item="changeCurrentDestinationItem"/>
 
                 <DestinationItem :title="'mars'" :description="'Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!'" :avg_distance="225" :travel_time="9" v-if="currentDestinationItem === 2" @change-destination-item="changeCurrentDestinationItem"/>
@@ -49,12 +51,16 @@ export default {
 <style lang="sass" scoped>
     @import '../sass/variables.scss'
 
+    .header__style
+        margin: 0 auto
+        width: 80%
+        max-width: 1400px
+
     .active
         color: #fff !important
         border-bottom: 3px solid $color_white !important
 
     .container
-        height: 100%
         min-height: 100vh
         width: 100%
         padding: 2em 0
@@ -67,9 +73,11 @@ export default {
     .destination
         display: flex
         flex-direction: column
+        justify-content: center
+        align-items: center
         width: 80%
-        height: 88.5%
+        min-height: calc(100vh - 64px)
+        height: 100%
         max-width: 1400px
         margin: 0 auto
-
 </style>

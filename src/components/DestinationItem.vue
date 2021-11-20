@@ -79,7 +79,7 @@ export default {
         margin: 6em 0
     
     .item__img
-        padding: 0 6em
+        padding-right: 12em
     
     .item-text
         width: 100%
