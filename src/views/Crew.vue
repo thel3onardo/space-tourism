@@ -57,7 +57,7 @@ export default {
 <style lang="sass" scoped>
     .crew
         min-height: 100vh
-        height: 100%
+        height: 100vh
         width: 100%
         padding: 2em 0
         overflow: hidden

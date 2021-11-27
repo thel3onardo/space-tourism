@@ -62,12 +62,12 @@ export default {
 
 <style lang="sass" scoped>
     .technology
-        padding: 2em 0
         min-height: 100vh
-        height: 100%
+        height: 100vh
         width: 100%
         display: flex
         flex-direction: column
+        padding: 2em 0
 
         background-image: url('../assets/technology/background-technology-desktop.jpg')
         background-size: cover
@@ -78,6 +78,10 @@ export default {
         max-width: 1400px
         width: 100%
         margin: 0 auto
+
+        display: flex
+        flex-direction: column
+        justify-content: center
 
     .technology__content
         display: flex

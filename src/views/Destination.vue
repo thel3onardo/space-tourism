@@ -76,8 +76,7 @@ export default {
         justify-content: center
         align-items: center
         width: 80%
-        min-height: calc(100vh - 64px)
-        height: 100%
+        height: 100vh
         max-width: 1400px
         margin: 0 auto
 </style>

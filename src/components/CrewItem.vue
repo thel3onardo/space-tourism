@@ -59,7 +59,6 @@ export default {
         align-items: center
         justify-content: space-around
         height: 100%
-        position: absolute
 
     .crew-item__text
         display: flex

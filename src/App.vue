@@ -3,7 +3,7 @@
     <audio autoplay loop ref="audio">
       <source src="./audio/interstellar.mp3" type="audio/mpeg">
     </audio>
-    <app-music-mute @changemusicstate="changeMusicState" style="bottom: 0"/>
+    <app-music-mute @changemusicstate="changeMusicState"/>
     <router-view/>
   </div>
 </template>
